@@ -1,5 +1,4 @@
 from contextlib import asynccontextmanager
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -48,7 +47,7 @@ app.include_router(api_router, prefix=settings.api_v1_str)
 @app.get("/", tags=["Root"])
 def root() -> dict:
     return {
-        "message": "Backend fase 3 corriendo con auth y clasificación de correos.",
+        "message": "Backend fase 3 corriendo con auth y clasificación de correos. Prueba de cambios en backend.",
         "docs": "/docs",
         "api_prefix": settings.api_v1_str,
     }
